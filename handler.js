@@ -83,6 +83,7 @@ module.exports = {
       } catch (e) {
         console.error(e)
       }
+      conn.chatRead(m.chat)
       if (opts['nyimak']) return
       if (!m.fromMe && opts['self']) return
       if (opts['pconly'] && m.chat.endsWith('g.us')) return
